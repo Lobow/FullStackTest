@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>Alterar cadastro do Aluno</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Informe o nome do Produto"
+                [(ngModel)]="produto.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput mask="0000-00-00" placeholder="Informe a Data de Entrada"
+                [(ngModel)]="produto.data" name="data" disabled>                
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Informe as informações do produto"
+                [(ngModel)]="produto.detalhes" name="detalhes">
+        </mat-form-field>   
+           </form>
+    <button mat-raised-button (click)="updateProduto()" color="primary" >
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
